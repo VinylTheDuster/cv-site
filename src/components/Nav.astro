@@ -1,9 +1,18 @@
+---
+const links = [
+	{ pathAccueil: "" },
+	{ pathPresentation: "presentation/" },
+	{ pathProjets: "projets/" },
+	{ pathContact: "contact/" },
+];
+---
+
 <nav>
-	<script src="../../public/scripts/nav.js"></script>
+	<script src="{`${base}scripts/nav.js`}"></script>
 	<div id="nav" class="nav-links">
 		<div class="nav-logo">
 			<a href="/">
-				<img src="/public/logo.png" alt="Mon logo" />
+				<img src="{`${base}logo.png`}" alt="Mon logo" />
 			</a>
 		</div>
 		<div id="nav-hambuga">
@@ -14,12 +23,12 @@
 		</div>
 		<button id="nav-menu">
 			<ul>
-				<li class=""><a id="" class="nav-button-links" href="/">Acceuil</a></li>
-				<li class=""><a id="" class="nav-button-links" href="/presentation">Présentation</a></li>
-				<li class=""><a id="" class="nav-button-links" href="/projets">Projets</a></li>
-				<li class=""><a id="" class="nav-button-links" href="/contact">Contact</a></li>
-				<li class=""><a href="https://github.com/VinylTheDuster" target="_blank"><img src="./src/assets/github-mark-white.svg" alt=""></a></li>
-				<li class=""><a href="https://www.linkedin.com/in/william-salembien/" target="_blank"><img src="/public/InBug-White.png" alt=""></a></li>
+				<li class=""><a id="" class="nav-button-links" href="{`${base}${pathAccueil}`}">Acceuil</a></li>
+				<li class=""><a id="" class="nav-button-links" href="{`${base}${pathPresentation}`}">Présentation</a></li>
+				<li class=""><a id="" class="nav-button-links" href="{`${base}${Projets}`}">Projets</a></li>
+				<li class=""><a id="" class="nav-button-links" href="{`${base}${pathContact}`}">Contact</a></li>
+				<li class=""><a href="https://github.com/VinylTheDuster" target="_blank"><img src="{`${base}github-mark-white.svg`}" alt=""></a></li>
+				<li class=""><a href="https://www.linkedin.com/in/william-salembien/" target="_blank"><img src="{`${base}InBug-White.png`}" alt=""></a></li>
 			</ul>
 			</ul>
 		</button>
