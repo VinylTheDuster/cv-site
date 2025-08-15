@@ -47,13 +47,13 @@
 
 /* global styles */
 body {
-  background-image: url("../src/assets/bg-presentation.png");
+  background-image: url("/public/bg-presentation.png");
   background-size: 5%;
 }
 
 header {
   overflow:auto;
-  background: linear-gradient(90deg,rgba(59, 75, 121, 1) 0%, rgba(127, 198, 200, 1) 50%, rgba(246, 212, 120, 1) 100%), url("../src/assets/bg-header.png"), 50%;
+  background: linear-gradient(90deg,rgba(59, 75, 121, 1) 0%, rgba(127, 198, 200, 1) 50%, rgba(246, 212, 120, 1) 100%), url("/public/bg-header.png"), 50%;
   box-shadow: 0px 0px 200px rgba(0, 0, 0, 0.648);
   background-blend-mode: lighten;
   background-size: 100%, 3%;
