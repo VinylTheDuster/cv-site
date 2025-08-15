@@ -1,10 +1,16 @@
-import.meta.env.PUBLIC_EMAILJS_SERVICE
+const key = import.meta.env.PUBLIC_EMAILJS_KEY;
+const service = import.meta.env.PUBLIC_EMAILJS_SERVICE;
+const template = import.meta.env.PUBLIC_EMAILJS_TEMPLATE;
 
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("contact-form");
 
     // prevent event listener to happen twice
     form.addEventListener("submit", handleSubmit, { once: true });
+});
+
+emailjs.init({
+  publicKey: key,
 });
 
 function handleSubmit(event) {
@@ -20,7 +26,7 @@ function handleSubmit(event) {
     };
 
     // allows to send an email via the emailjs api
-    emailjs.send(import.meta.env.PUBLIC_EMAILJS_SERVICE, import.meta.env.PUBLIC_EMAILJS_TEMPLATE, parameters)
+    emailjs.send(service, template, parameters)
         .then(() => alert("Email envoyé avec succès."))
         .catch((error) => {
             console.error("Erreur EmailJS :", error);

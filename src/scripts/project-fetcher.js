@@ -1,4 +1,4 @@
-import { supabase } from '../../src/lib/supabase.ts';
+import { supabase } from '../lib/supabase.ts';
 
 // stock the container containing the project-items
 const projectGrid = document.getElementById("project-grid");
