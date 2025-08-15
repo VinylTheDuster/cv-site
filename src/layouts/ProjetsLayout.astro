@@ -1,4 +1,8 @@
-<script is:inline type="module" src="{`${base}scripts/project-fetcher.js`}"></script>
+---
+const base = import.meta.env.BASE_URL;
+---
+
+<script type="module" src={`${base}scripts/project-fetcher.js`}></script>
 <section class="project-container">
 	<div>
 		<h2>

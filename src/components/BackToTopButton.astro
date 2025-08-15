@@ -1,7 +1,7 @@
 ---
-
+const base = import.meta.env.BASE_URL;
 ---
-<script is:inline src="{`${base}scripts/backtotop.js`}"></script>
+<script is:inline src={`${base}scripts/backtotop.js`} defer></script>
 <button id="back-to-top">
 	<p>
 		⯅ HAUT DE PAGE ⯅

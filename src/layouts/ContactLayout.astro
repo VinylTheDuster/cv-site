@@ -1,5 +1,8 @@
+---
+const base = import.meta.env.BASE_URL;
+---
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script is:inline src="{`${base}scripts/contact.js`}"></script>
+<script is:inline src={`${base}scripts/contact.js`} defer></script>
 <section id="form-section">
 	<form id="contact-form">
 		<h2>Formulaire de contact</h2>

@@ -1,18 +1,19 @@
 ---
+const base = import.meta.env.BASE_URL;
 const links = [
-	{ pathAccueil: "" },
-	{ pathPresentation: "presentation/" },
-	{ pathProjets: "projets/" },
-	{ pathContact: "contact/" },
+  { name: 'Accueil',      path: '' },
+  { name: 'Présentation', path: 'presentation/' },
+  { name: 'Projets',      path: 'projets/' },
+  { name: 'Contact',      path: 'contact/' },
 ];
 ---
 
 <nav>
-	<script src="{`${base}scripts/nav.js`}"></script>
+	<script src={`${base}scripts/nav.js`} defer></script>
 	<div id="nav" class="nav-links">
 		<div class="nav-logo">
 			<a href="/">
-				<img src="{`${base}logo.png`}" alt="Mon logo" />
+				<img src={`${base}logo.png`} alt="Mon logo" />
 			</a>
 		</div>
 		<div id="nav-hambuga">
@@ -22,14 +23,25 @@ const links = [
 			<span></span>
 		</div>
 		<button id="nav-menu">
+			<!-- Liste de navigation -->
 			<ul>
-				<li class=""><a id="" class="nav-button-links" href="{`${base}${pathAccueil}`}">Acceuil</a></li>
-				<li class=""><a id="" class="nav-button-links" href="{`${base}${pathPresentation}`}">Présentation</a></li>
-				<li class=""><a id="" class="nav-button-links" href="{`${base}${Projets}`}">Projets</a></li>
-				<li class=""><a id="" class="nav-button-links" href="{`${base}${pathContact}`}">Contact</a></li>
-				<li class=""><a href="https://github.com/VinylTheDuster" target="_blank"><img src="{`${base}github-mark-white.svg`}" alt=""></a></li>
-				<li class=""><a href="https://www.linkedin.com/in/william-salembien/" target="_blank"><img src="{`${base}InBug-White.png`}" alt=""></a></li>
-			</ul>
+				{links.map(link => (
+					<li>
+						<a class="nav-button-links" href={`${base}${link.path}`}>
+							{link.name}
+						</a>
+					</li>
+				))}
+				<li>
+      				<a href="https://github.com/VinylTheDuster" target="_blank" rel="noopener">
+        			<img src={`${base}github-mark-white.svg`} alt="GitHub" />
+      				</a>
+    			</li>
+    			<li>
+      				<a href="https://www.linkedin.com/in/william-salembien/" target="_blank" rel="noopener">
+        			<img src={`${base}InBug-White.png`} alt="LinkedIn" />
+      				</a>
+    			</li>
 			</ul>
 		</button>
 	</div>

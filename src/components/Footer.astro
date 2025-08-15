@@ -1,4 +1,7 @@
-<script is:inline src="{`${base}scripts/footer-copyright.js`}"></script>
+---
+const base = import.meta.env.BASE_URL;
+---
+<script is:inline src={`${base}scripts/footer-copyright.js`} defer></script>
 <footer>
 	<p>
 		<a href="./">CV/Portfolio Website</a>

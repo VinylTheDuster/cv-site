@@ -1,3 +1,6 @@
+---
+const base = import.meta.env.BASE_URL;
+---
 <section class="hero-container">
 	<div id="label-left" class="hero-label">
 		<h2><strong>WILLIAM SALEMBIEN</strong></h2>	
@@ -16,7 +19,7 @@
   			<em>Découvrez mon parcours, mes projets… et ce que je peux créer pour vous.</em>
 		</p>
 
-		<a href="{`${base}download/`}">
+		<a href={`${base}download/`}>
 			<button>
 				Télécharger mon CV
 			</button>
